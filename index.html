@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Nusantara | Katalog Makanan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+```
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <a href="#beranda" class="logo">🍲 Rasa<span>Nusantara.</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <p class="subtitle">UMKM LOKAL • DIBUAT DENGAN HATI</p>
+
+            <h1>Rasa Rumahan,<br><em>Bahagia</em> di Setiap Gigitan.</h1>
+
+            <p class="hero-description">
+                Temukan makanan dan camilan favorit dengan cita rasa khas
+                Nusantara. Dibuat dari bahan pilihan dan cocok dinikmati
+                bersama keluarga.
+            </p>
+
+            <a href="#produk" class="btn">Lihat Produk →</a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+                alt="Aneka makanan lezat">
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="features">
+        <div>🌿 Bahan Pilihan</div>
+        <div>❤️ Dibuat dengan Hati</div>
+        <div>🍽️ Cita Rasa Lokal</div>
+    </section>
+
+    <!-- KATALOG PRODUK -->
+    <section class="products section" id="produk">
+        <div class="section-heading">
+            <p class="subtitle">PILIHAN FAVORIT</p>
+            <h2>Katalog <em>Makanan Kami</em></h2>
+            <p>Pilih camilan favoritmu dan nikmati kelezatannya!</p>
+        </div>
+
+        <!-- PENCARIAN DAN FILTER -->
+        <div class="catalog-tools">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari nama makanan..."
+                aria-label="Cari makanan">
+
+            <select id="categoryFilter" aria-label="Filter kategori">
+                <option value="semua">Semua Kategori</option>
+                <option value="gurih">Gurih</option>
+                <option value="manis">Manis</option>
+                <option value="tradisional">Tradisional</option>
+            </select>
+        </div>
+
+    
+
+            <!-- PRODUK 2 -->
+            <article class="product-card" data-name="nasi goreng" data-category="gurih">
+                <img
+                    src="nasgor.jpg"
+                    alt="NASI GORENG NUSANTARA">
+
+                <div class="product-info">
+                    <span class="category">MENU TERBAIK</span>
+                    <h3>NASI GORENG NUSANTARA</h3>
+                    <p>Nasi goreng dengan bumbu istimewa dan topping lezat.</p>
+                    <P>rasa yang akan mengingatkan kita tentang kenikmatan makanan nusantara</P>
+                    <p>yang sangat super lezat dan menggugah selera</p>
+
+                    <div class="product-bottom">
+                        <strong>Rp25.000</strong>
+                        <button class="order-btn" data-product="Nasi Goreng Nusantara">Pesan ↗</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRODUK 3 -->
+            <article class="product-card" data-name="pastel mini" data-category="tradisional">
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+                    alt="Pastel mini">
+
+                <div class="product-info">
+                    <span class="category">JAJANAN TRADISIONAL</span>
+                    <h3>Pastel Mini</h3>
+                    <p>Pastel dengan kulit renyah dan isian gurih yang menggugah selera.</p>
+
+                    <div class="product-bottom">
+                        <strong>Rp20.000</strong>
+                        <button class="order-btn" data-product="Pastel Mini">Pesan ↗</button>
+                    </div>
+                </div>
+            </article>
+
+            
+        
+
+            <!-- PRODUK 6 -->
+            <article class="product-card" data-name="puding buah" data-category="manis">
+                <img
+                    src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80"
+                    alt="Puding buah">
+
+                <div class="product-info">
+                    <span class="category">DESSERT</span>
+                    <h3>Puding Buah</h3>
+                    <p>Puding lembut dengan sentuhan buah yang segar dan manis.</p>
+
+                    <div class="product-bottom">
+                        <strong>Rp12.000</strong>
+                        <button class="order-btn" data-product="Puding Buah">Pesan ↗</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="emptyState" class="empty-state" hidden>
+            Produk tidak ditemukan.
+        </p>
+
+        <p class="price-note">
+            *Harga merupakan contoh dan dapat disesuaikan.
+        </p>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video-section" id="video">
+        <div class="video-content">
+            <p class="subtitle">DI BALIK DAPUR KAMI</p>
+            <h2>Proses Pembuatan <em>Makanan</em></h2>
+            <p>
+                Saksikan video proses pembuatan makanan untuk mengenal
+                produk UMKM kami lebih dekat.
+            </p>
+        </div>
+
+        <div class="video-container">
+            <video controls poster="gambar.jpg">
+                <source src="video-umkm.mp4.mp4" type="video/mp4">
+                Browser kamu tidak mendukung pemutar video.
+            </video>
+
+            <p class="video-note">
+                Masukkan video MP4 bernama <b>video-umkm.mp4</b>
+                ke folder proyek agar video dapat diputar.
+            </p>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section class="about section" id="tentang">
+        <div class="about-image">
+            <img
+                src="dapur.png"
+                alt="Suasana dapur tempat membuat makanan">
+        </div>
+
+        <div class="about-content">
+            <p class="subtitle">TENTANG KAMI</p>
+            <h2>Dari Dapur Kecil untuk <em>Semua Hati.</em></h2>
+
+            <p>
+                Rasa Nusantara adalah usaha makanan lokal yang menyediakan
+                aneka makanan dengan cita rasa khas Indonesia. Kami ingin
+                menghadirkan makanan berkualitas yang cocok dinikmati
+                sendiri maupun bersama keluarga.
+            </p>
+
+            <div class="advantages">
+                <p>✓ Bahan berkualitas</p>
+                <p>✓ Rasa khas rumahan</p>
+                <p>✓ Cocok untuk berbagai acara</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact section" id="kontak">
+        <div class="contact-content">
+            <p class="subtitle">HUBUNGI KAMI</p>
+            <h2>Yuk, Pesan Makanan <em>Favoritmu!</em></h2>
+            <p>
+                Hubungi kami untuk mendapatkan informasi produk
+                dan melakukan pemesanan.
+            </p>
+
+            <a
+                href="https://wa.me/6281234567890"
+                class="btn btn-light"
+                id="whatsappLink"
+                target="_blank"
+                rel="noopener">
+                Hubungi WhatsApp ↗
+            </a>
+
+            <p class="contact-note">
+                Instagram: @rasanusantara
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© <span id="year"></span> Rasa Nusantara. Katalog UMKM Lokal.</p>
+    <p>Dibuat dengan ❤️ oleh ahmad nur salam untuk mendukung produk lokal.</p>
+</footer>
+```
+
+</body>
+</html>
